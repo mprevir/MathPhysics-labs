@@ -1,5 +1,8 @@
 function solveMF1_1( f_x, l )
-%solves the equation u''_x = -f_x using Fourier's method
+%solves the equation u''_x = -f_x; u(0)=u(l)=0  using Fourier's method
+%
+%usage:
+%   sovleMF1_1( f_x, l )
 
     h = l/150;
     x = 0:h:l;
