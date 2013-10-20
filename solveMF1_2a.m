@@ -51,7 +51,7 @@ function solveMF1_2a( q_x, k, beta, gamma1, gamma2, f_x, l )
     y = zeros(1,N);
     y(N) = (-B(N)*b(N)+f(N)) / (D(N)+B(N)*a(N));
 
-    for i=N-2:-1:1
+    for i=N-1:-1:1
         y(i) = a(i+1)*y(i+1)+b(i+1);
     end;    
 
