@@ -1,10 +1,10 @@
-function testMF1_2( q_x, k, beta, gamma1, gamma2, f_x, l )
+function solveMF1_2a( q_x, k, beta, gamma1, gamma2, f_x, l )
 %solve following boundary value problem:
 %  k*u''(x)-q(x)*u(x) = -f(x), 0<x<l
 %  -k*u'(0)+beta*u(0)=gamma1, u(l)=gamma2
 %
 %usage:
-%   testMF1_2( q_x, k, beta, gamma1, gamma2, f_x, l )
+%   solveMF1_2a( q_x, k, beta, gamma1, gamma2, f_x, l )
     
     h = l/500;
     x = 0:h:l;
@@ -35,7 +35,7 @@ function testMF1_2( q_x, k, beta, gamma1, gamma2, f_x, l )
     f = zeros(1,N);
     f(1) = gamma1;
     for i = 2:N-1
-        f(i) = f_x(x(i));
+        f(i) = -f_x(x(i));
     end;
     f(N) = gamma2;
    
